@@ -1,1 +1,84 @@
-.
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Python Programs Display</title>
+<style>
+  body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 30px;
+    background-color: #f8f9fa;
+    color: #212529;
+  }
+  h2 {
+    color: #0056b3;
+  }
+  pre {
+    background-color: #282c34;
+    color: #ffffff;
+    padding: 15px;
+    border-radius: 8px;
+    overflow-x: auto;
+  }
+  .program {
+    background-color: #ffffff;
+    padding: 20px;
+    margin-bottom: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  }
+  .statement {
+    font-weight: bold;
+    color: #d63384;
+  }
+</style>
+</head>
+<body>
+
+  <h1>Python Programs</h1>
+
+  <div class="program">
+    <p class="statement">Program Statement 3(a):</p>
+    <p>Read N numbers from the console and create a list. Develop a program to print mean, variance, and standard deviation with suitable messages.</p>
+
+    <h2>Program Code:</h2>
+    <pre>
+import statistics
+a = list() #empty list
+number = int(input("Enter the number of elements you want: ")) #ask user to enter the values
+print('Enter number in array: ')
+for i in range(int(number)):
+    n = input("number : ")
+    a.append(int(n)) # append method will add elements in list
+
+print("\nGiven 'n' number: ")
+print(a)
+
+m = statistics.mean(a)
+v = statistics.variance(a)
+st = statistics.stdev(a)
+
+print("\nMean: ", m)
+print("\nVariance: ", v)
+print("\nStandard Deviation: ", st)
+    </pre>
+  </div>
+
+  <div class="program">
+    <p class="statement">Program Statement 3(b):</p>
+    <p>Read a multi-digit number (as chars) from the console. Develop a program to print the frequency of each digit with a suitable message.</p>
+
+    <h2>Program Code:</h2>
+    <pre>
+a = input("enter a multi digit number:") # reading each digit as character
+l = list(a) # converting string to list
+print("\nlist of given number is l =", l)
+freq = [l.count(ele) for ele in l]
+d = dict(zip(l, freq))
+print("\nfrequency of each digit is:", d)
+    </pre>
+  </div>
+
+</body>
+</html>
