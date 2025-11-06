@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lab 3 (a,b)</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 40px;
+      background-color: #f9f9f9;
+      color: #222;
+      line-height: 1.6;
+    }
+    h2 {
+      color: #2c3e50;
+    }
+    pre {
+      background-color: #eef;
+      border-left: 5px solid #2c3e50;
+      padding: 15px;
+      overflow-x: auto;
+      border-radius: 5px;
+    }
+    .section {
+      margin-bottom: 40px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Lab 3 (a, b)</h1>
+
+  <div class="section">
+    <h2>Program Statement 3(a)</h2>
+    <p>
+      Read N numbers from the console and create a list. Develop a program to print mean,
+      variance and standard deviation with suitable messages.
+    </p>
+    <h3>Program Code:</h3>
+    <pre>
+import statistics
+
+a = list()  # empty list
+number = int(input("Enter the number of elements you want: "))  # ask user to enter the values
+
+print('Enter number in array:')
+for i in range(int(number)):
+    n = input("number : ")
+    a.append(int(n))  # append method will add elements in list
+
+print("\nGiven 'n' number: ")
+print(a)
+
+m = statistics.mean(a)
+v = statistics.variance(a)
+st = statistics.stdev(a)
+
+print("\nMean: ", m)
+print("\nVariance: ", v)
+print("\nStandard Deviation: ", st)
+    </pre>
+  </div>
+
+  <div class="section">
+    <h2>Program Statement 3(b)</h2>
+    <p>
+      Read a multi-digit number (as chars) from the console. Develop a program to print the
+      frequency of each digit with a suitable message.
+    </p>
+    <h3>Program Code:</h3>
+    <pre>
+a = input("enter a multi digit number:")  # reading each digit as character
+
+l = list(a)  # converting string to list
+
+print("\nlist of given number is l =", l)
+
+freq = [l.count(ele) for ele in l]
+d = dict(zip(l, freq))
+
+print("\nfrequency of each digit is:", d)
+    </pre>
+  </div>
+</body>
+</html>
